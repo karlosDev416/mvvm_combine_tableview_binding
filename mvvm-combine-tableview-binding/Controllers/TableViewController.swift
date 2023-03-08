@@ -29,17 +29,19 @@ class TableViewController: UITableViewController {
     
     private func observe() {
 
-      vm.transform(input: output.eraseToAnyPublisher()).sink { [unowned self] event in
-        switch event {
-        case .setProducts(let products):
-          self.products = products
-        case let .updateView(numberOfItemsInCart, totalCost, likedProductIds, productQuantities):
-          self.numberOfItemsInCart = numberOfItemsInCart
-          self.totalCost = totalCost
-          self.likedProductIds = likedProductIds
-          self.productQuantities = productQuantities
-          self.tableView.reloadData()
-        }
+      vm.transform(input: output.eraseToAnyPublisher())
+        .receive(on: DispatchQueue.main)
+        .sink { [unowned self] event in
+            switch event {
+            case .setProducts(let products):
+                self.products = products
+            case let .updateView(numberOfItemsInCart, totalCost, likedProductIds, productQuantities):
+                self.numberOfItemsInCart = numberOfItemsInCart
+                self.totalCost = totalCost
+                self.likedProductIds = likedProductIds
+                self.productQuantities = productQuantities
+                self.tableView.reloadData()
+            }
       }.store(in: &cancellables)
     }
     

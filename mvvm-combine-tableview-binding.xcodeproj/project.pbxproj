@@ -19,6 +19,7 @@
 		B1BA166329B91E5D00CE86AA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BA166229B91E5D00CE86AA /* ViewModel.swift */; };
 		B1BA166629B91EA700CE86AA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BA166529B91EA700CE86AA /* Product.swift */; };
 		B1BA166929B91EED00CE86AA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BA166829B91EED00CE86AA /* ProductTableViewCell.swift */; };
+		B1BA166D29B92E3000CE86AA /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BA166C29B92E3000CE86AA /* ProductService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B1BA166229B91E5D00CE86AA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B1BA166529B91EA700CE86AA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B1BA166829B91EED00CE86AA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		B1BA166C29B92E3000CE86AA /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		B1BA163029B91A7300CE86AA /* mvvm-combine-tableview-binding */ = {
 			isa = PBXGroup;
 			children = (
+				B1BA166B29B92E1B00CE86AA /* Service */,
 				B1BA166429B91E8800CE86AA /* Models */,
 				B1BA166729B91EDB00CE86AA /* Views */,
 				B1BA166129B91E4D00CE86AA /* ViewModels */,
@@ -166,6 +169,14 @@
 				B1BA163529B91A7300CE86AA /* TableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B1BA166B29B92E1B00CE86AA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B1BA166C29B92E3000CE86AA /* ProductService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				B1BA166629B91EA700CE86AA /* Product.swift in Sources */,
 				B1BA166329B91E5D00CE86AA /* ViewModel.swift in Sources */,
 				B1BA163429B91A7300CE86AA /* SceneDelegate.swift in Sources */,
+				B1BA166D29B92E3000CE86AA /* ProductService.swift in Sources */,
 				B1BA166929B91EED00CE86AA /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
